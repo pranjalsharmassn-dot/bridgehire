@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* BridgeHire Color System */
+  --background: 0 0% 99%;
+  --foreground: 220 30% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 30% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 30% 10%;
+  
+  /* Primary Navy - Deep Professional */
+  --primary: 220 45% 23%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary Steel Blue */
+  --secondary: 201 48% 45%;
+  --secondary-foreground: 0 0% 100%;
+  
+  /* Accent Gold - Trust & Verification */
+  --accent: 39 86% 57%;
+  --accent-foreground: 220 30% 10%;
+  
+  /* Muted for secondary UI */
+  --muted: 220 13% 91%;
+  --muted-foreground: 220 12% 44%;
+  
+  /* Destructive for alerts */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  
+  /* Border and input */
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 201 48% 45%;
+  
+  /* Chart colors */
+  --chart-1: 201 48% 45%;
+  --chart-2: 220 45% 23%;
+  --chart-3: 39 86% 57%;
+  --chart-4: 7 86% 67%;
+  --chart-5: 214 47% 59%;
+  
+  --radius: 0.5rem;
+  --sidebar: 0 0% 100%;
+  --sidebar-foreground: 220 30% 10%;
+  --sidebar-primary: 220 45% 23%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 39 86% 57%;
+  --sidebar-accent-foreground: 220 30% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 201 48% 45%;
+}
+
+.dark {
+  --background: 220 30% 8%;
+  --foreground: 0 0% 98%;
+  --card: 220 30% 13%;
+  --card-foreground: 0 0% 98%;
+  --popover: 220 30% 13%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 201 48% 55%;
+  --primary-foreground: 220 30% 8%;
+  --secondary: 39 86% 57%;
+  --secondary-foreground: 220 30% 8%;
+  --muted: 220 30% 25%;
+  --muted-foreground: 220 12% 70%;
+  --accent: 39 86% 65%;
+  --accent-foreground: 220 30% 8%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 220 30% 25%;
+  --input: 220 30% 25%;
+  --ring: 39 86% 57%;
+  --chart-1: 201 48% 55%;
+  --chart-2: 39 86% 57%;
+  --chart-3: 220 45% 23%;
+  --chart-4: 7 86% 67%;
+  --chart-5: 214 47% 68%;
+  --sidebar: 220 30% 13%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-primary: 201 48% 55%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 39 86% 57%;
+  --sidebar-accent-foreground: 220 30% 8%;
+  --sidebar-border: 220 30% 25%;
+  --sidebar-ring: 39 86% 57%;
+}
+
+@theme inline {
+  --font-sans: 'var(--font-inter)', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'var(--font-playfair)', 'Playfair Display', serif;
+  --font-mono: 'Geist Mono', 'Courier New', monospace;
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* Typography hierarchy with Playfair for headings */
+  h1 {
+    @apply font-serif text-4xl font-bold tracking-tight text-pretty;
+  }
+  
+  h2 {
+    @apply font-serif text-3xl font-bold tracking-tight text-pretty;
+  }
+  
+  h3 {
+    @apply font-serif text-2xl font-semibold tracking-tight text-pretty;
+  }
+  
+  h4 {
+    @apply font-serif text-xl font-semibold text-pretty;
+  }
+  
+  p {
+    @apply leading-relaxed text-base;
+  }
+}
