@@ -53,13 +53,13 @@ export default function Signup() {
               {[
                 {
                   type: 'veteran' as const,
-                  title: 'I'm a Veteran',
+                  title: "I'm a Veteran",
                   description: 'Retired government official or armed forces personnel',
                   benefits: ['Browse job opportunities', 'AI Translation support', 'Verified status'],
                 },
                 {
                   type: 'recruiter' as const,
-                  title: 'I'm a Recruiter',
+                  title: "I'm a Recruiter",
                   description: 'Looking to hire experienced professionals',
                   benefits: ['Post job openings', 'Access veteran talent pool', 'Verified candidates'],
                 },
